@@ -1,10 +1,8 @@
-'''
-        Trajectory Map
-        2022.06.11
-        Matej Kožić
-        
-                        '''
-
+#TrajMap
+#Author: Matej Kožić
+#Email: mkozic@chem.pmf.hr
+#Date: July 16, 2022
+#Link: https://github.com/matkozic/TrajMap
 ###############################################################################
 
 import pandas as pd
@@ -258,7 +256,7 @@ def matrix2map (matrix, savefig, title, params):
 
 # params = [res1, res2, time1, time2]
 
-def matrix2avg (matrix, params):                                                            #seed; #clmb, sony a 7 III, Burkard...
+def matrix2avg (matrix, params):                                                           
     
     res1 = params[0]
     res2 = params[1]
