@@ -8,7 +8,7 @@ TrajMap.py quick guide for Linux usage with bash scripts
 ######################################
 ### Matej Kožić | mkozic@chem.pmf.hr | 2023.02.27 | github.com/matkozic/TrajMap
 
-The program can be used inside of Linux terminal with provided Bash scripts:
+The program can be used inside of Linux terminal with TM_kit, where are provided Bash scripts:
 	- tm_preproc.sh
 	- tm_makemap.sh
 	- tm_graph.sh
