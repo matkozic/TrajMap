@@ -1,7 +1,4 @@
-# TrajMap
-MD simulation trajectory visualization tool
-
-![TrajMap_github_psoter](https://user-images.githubusercontent.com/109069239/221702232-a76eb907-08b8-46c1-ab72-ff4922da5c39.jpg)
+![TM_poster_v2](https://user-images.githubusercontent.com/109069239/221801906-44081cea-a070-4035-b68c-b2fbe7c1e9fb.jpg)
 
 ######################################
 TrajMap.py quick guide for Linux usage with bash scripts
