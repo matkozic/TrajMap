@@ -1,4 +1,4 @@
-![TM_poster_v2](https://user-images.githubusercontent.com/109069239/221801906-44081cea-a070-4035-b68c-b2fbe7c1e9fb.jpg)
+![TM_poster_v2](https://user-images.githubusercontent.com/109069239/221822128-2d566047-efae-4bb8-967b-9f3dc5bdc71c.jpg)
 
 ######################################
 TrajMap.py quick guide for Linux usage with bash scripts
