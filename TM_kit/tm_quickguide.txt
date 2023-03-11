@@ -110,7 +110,7 @@ When creating a difference map the colormap should be divergent (1/3/6).
  	vmin/vmax = -/+8
 	
 **Capped colormaps have minimal and maximal values in a different
-flat color, to indicate where shifts surpass the bounds and values get clipped.
+flat color, to indicate where values surpass the bounds and get clipped.
 Capped colormaps are useful for callibrating the colorscale. A small amount
 of clipping in insignificant maxima is acceptable, so long as significant
 peaks have optimal resolution.
