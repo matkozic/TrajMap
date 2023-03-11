@@ -29,7 +29,7 @@ colors[250:] = mcolors.to_rgba('fuchsia')
 colors[:5] = mcolors.to_rgba('cyan')
 seismic_capped = mcolors.LinearSegmentedColormap.from_list('seismic_capped', colors)
 
-# ChatGPT AI generated really bad random unusable noice colormap
+# ChatGPT AI generated really bad random unusable noise colormap
 def random_segmented_cmap(n):
     c = np.random.rand(n+1,3)
     return mcolors.LinearSegmentedColormap.from_list('r', np.repeat(c,2,0))
@@ -234,12 +234,12 @@ def matrix2map (matrix, savefig, title, params):
 
     if cmap == 0 : cmap = "magma"
     elif cmap == 1 :  cmap = "seismic"
-    elif cmap == 2 : cmap = seismic_capped
-    elif cmap == 3 : cmap = viridis_capped
-    elif cmap == 4 : cmap = random_segmented_cmap(np.random.randint(1, 99))
-    elif cmap == 5 : cmap = viridis_segmented
-    elif cmap == 6 : cmap = "Greys"
-    elif cmap == 7 : cmap = "turbo"
+    elif cmap == 2 : cmap = viridis_capped
+    elif cmap == 3 : cmap = seismic_capped
+    elif cmap == 4 : cmap = viridis_segmented
+    elif cmap == 5 : cmap = "Greys"
+    elif cmap == 6 : cmap = "turbo"
+    elif cmap == 666 : cmap = random_segmented_cmap(np.random.randint(1, 99))
      
     if aspect == 0 : aspect = "auto"
     elif aspect == 1 : aspect = "equal"
