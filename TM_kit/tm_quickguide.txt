@@ -88,20 +88,34 @@ The format of "params" variable is as following:
 	vmin/vmax are respective values of the color scale
 	residues is real number of residues
 	cmap is the used colormap:
-		0 for a linear colormap, for a single trajectory map
+		0 for a linear* colormap, for a single trajectory map
 		1 for a divergent colormap, for difference maps
+		2 for a linear green ("viridis") capped* colormap
+		3 for a divergent capped colormap
+		4 for a segmented viridis colormap (8 discrete segments)
+		5 for a monochrome colormap
+		6 for a rainbow ("turbo") really bad colormap (don't use it)
+		666 for a random unusable AI generated colormap*** 
 	aspect is for a pixel aspect, 0 for auto and 1 for square.
-		0 (auto) is recommended in most cases
-	
+		Auto (0) is recommended in most cases
+
 It is recomended to optimize parameters such as color scale resolution.
  Several iterations of parameter adjustments might be needed for best results.
 
-When creatign a single trajectory map the colormap should be linear (0).
+*When creating a single trajectory map the colormap should be linear (0/2/4/5).
  A linear map: a smooth transition from dark to light values.
-When creating a difference map the colormap should be divergent (1).
+When creating a difference map the colormap should be divergent (1/3/6).
  A divergent cmap: blue for negatives, white for zeroes, and red for positives. 
  The values for color scale shold also have the negative part, e.g:
  	vmin/vmax = -/+8
+	
+**Capped colormaps have minimal and maximal values in a different
+flat color, to indicate where shifts surpass the bounds and values get clipped.
+Capped colormaps are useful for callibrating the colorscale. A small amount
+of clipping in insignificant maxima is acceptable, so long as significant
+peaks have optimal resolution.
+
+***It's supposed to be funny.
 
 The map can be saved as either .png or .jpg, depending on the extension.
 
