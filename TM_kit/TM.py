@@ -1,6 +1,6 @@
 ###############################################################################
 # TrajMap_v_f1 ##### Matej Kožić | mkozic@chem.pmf.hr | 2022.11.25 15:00
-# MK, 2022.12.12
+# MatejKozic, 2023.03.11
 ###############################################################################
 
 import mdtraj as mdt
@@ -8,6 +8,34 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import (MultipleLocator)
+import matplotlib.colors as mcolors
+import matplotlib.cm as cm
+
+###############################################################################
+# Additional colormaps
+###############################################################################
+
+# Viridis capped
+viridis = cm.get_cmap('viridis', 256)
+colors = viridis(np.linspace(0, 1, 256))
+colors[250:] = mcolors.to_rgba('red')
+colors[:5] = mcolors.to_rgba('blue')
+viridis_capped = mcolors.LinearSegmentedColormap.from_list('viridis_capped', colors)
+
+# Seismic capped
+seismic = cm.get_cmap('seismic', 256)
+colors = seismic(np.linspace(0, 1, 256))
+colors[250:] = mcolors.to_rgba('fuchsia')
+colors[:5] = mcolors.to_rgba('cyan')
+seismic_capped = mcolors.LinearSegmentedColormap.from_list('seismic_capped', colors)
+
+# ChatGPT AI generated really bad random unusable noice colormap
+def random_segmented_cmap(n):
+    c = np.random.rand(n+1,3)
+    return mcolors.LinearSegmentedColormap.from_list('r', np.repeat(c,2,0))
+
+# Viridis segmented
+viridis_segmented = cm.get_cmap('viridis', 8)
 
 ###############################################################################
 # Functions
@@ -204,15 +232,17 @@ def matrix2map (matrix, savefig, title, params):
     cmap = params[7]
     aspect = params[8]
 
-    if cmap == 0 : 
-        cmap = "magma"
-    elif cmap == 1 : 
-        cmap = "seismic"
-        
-    if aspect == 0 :
-        aspect = "auto"
-    elif aspect == 1 :
-        aspect = "equal"
+    if cmap == 0 : cmap = "magma"
+    elif cmap == 1 :  cmap = "seismic"
+    elif cmap == 2 : cmap = seismic_capped
+    elif cmap == 3 : cmap = viridis_capped
+    elif cmap == 4 : cmap = random_segmented_cmap(np.random.randint(1, 99))
+    elif cmap == 5 : cmap = viridis_segmented
+    elif cmap == 6 : cmap = "Greys"
+    elif cmap == 7 : cmap = "turbo"
+     
+    if aspect == 0 : aspect = "auto"
+    elif aspect == 1 : aspect = "equal"
 
     ylabel = "Residue"
     xlabel = "Frame"
@@ -231,7 +261,7 @@ def matrix2map (matrix, savefig, title, params):
     ax.xaxis.set_minor_locator(MultipleLocator(x_minor))
     plt.ylabel(ylabel)
     plt.xlabel (xlabel)
-    plt.colorbar( label = "Shift / A", fraction=0.029, pad=0.028)
+    plt.colorbar( label = "Shift / Å", fraction=0.029, pad=0.028)
     plt.savefig(savefig, dpi = size, bbox_inches='tight')
     print("TrajMap saved to:", savefig)
 
@@ -293,7 +323,7 @@ def shift2graph (shift_data, savefig, title, label, y_params, x_params, roll_avg
     plt.xticks(np.arange(x_min, x_max + x_step, step=x_step)) 
     plt.title(title)
     plt.xlabel("Frame")
-    plt.ylabel ("Shift / A")
+    plt.ylabel ("Shift / Å")
     ax.yaxis.set_minor_locator(MultipleLocator(y_tick)) 
     ax.xaxis.set_minor_locator(MultipleLocator(x_tick))
 
@@ -506,6 +536,3 @@ while main == True:
         
     entry_counter = entry_counter + 1
     
-    
-    
-
