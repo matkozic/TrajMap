@@ -11,6 +11,8 @@ The program can be used inside of Linux terminal with TM_kit, where are provided
 	- tm_graph.sh
 Parameters of the scripts need to be adjusted, and then executed in order. 
 
+*** Download the TM_kit folder through some online tool such as:
+	https://minhaskamal.github.io/DownGit/#/home ****
 
 ### General Workflow:
 	1) Preprocessing: (tm_preproc.sh)
