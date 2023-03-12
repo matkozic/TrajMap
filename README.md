@@ -1,18 +1,15 @@
 ![TM_poster_v2](https://user-images.githubusercontent.com/109069239/221822128-2d566047-efae-4bb8-967b-9f3dc5bdc71c.jpg)
 
-######################################
-TrajMap.py quick guide for Linux usage with bash scripts
-######################################
-### Matej Kožić | mkozic@chem.pmf.hr | 2023.02.27 | github.com/matkozic/TrajMap
+### TrajMap.py quick guide for Linux usage with bash scripts
+
+*** Download the TM_kit folder with an online tool such as: https://minhaskamal.github.io/DownGit/#/home ****
+
 
 The program can be used inside of Linux terminal with TM_kit, where are provided Bash scripts:
 	- tm_preproc.sh
 	- tm_makemap.sh
 	- tm_graph.sh
 Parameters of the scripts need to be adjusted, and then executed in order. 
-
-*** Download the TM_kit folder through some online tool such as:
-	https://minhaskamal.github.io/DownGit/#/home ****
 
 ### General Workflow:
 	1) Preprocessing: (tm_preproc.sh)
