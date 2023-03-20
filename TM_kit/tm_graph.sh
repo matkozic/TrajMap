@@ -23,7 +23,7 @@ python3 TM.py << INPUTS
 
 csv2matrix
 $saved_csv
-matrix2shifts
+matrix2shift
 $shift_params
 shift2graph
 $savefig
