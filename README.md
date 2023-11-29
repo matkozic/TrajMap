@@ -149,6 +149,11 @@ If the code executes and exits successfully, everything should work.
 ### Considerations and errors:
 TrajMap currently supports only proteins with regular 4 atom backbones.
  (5 for residues, which are handled automatically)
+
+The preprocessing step automatically aligns the protein in the trajectories.
+If you wish to manually preprocess the trajectories, skipping that part,
+it is CRUCIAL TO ALIGN the protein.
+WITHOUT ALIGNING, results will be meaningless.
  
 Multiple chains are supported only if the residue counting is continuous.
  (meaning chain A is residues 1 to N and chain B is N+1 to 2N+2)
