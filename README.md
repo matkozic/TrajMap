@@ -2,7 +2,8 @@
 
 ### TrajMap.py quick guide for Linux usage with bash scripts
 
-*** Download the TM_kit folder with an online tool such as: https://minhaskamal.github.io/DownGit/#/home ****
+*** Download the TM_kit folder directly from GitHub or with an
+an online tool such as: https://minhaskamal.github.io/DownGit/#/home ****
 
 
 The program can be used inside of Linux terminal with TM_kit, where are provided Bash scripts:
@@ -119,6 +120,29 @@ roll_avg variable is for the rolling average.
 
 The full list of available colors can be found in matplotlib documentation.
 
+
+##############################################################################
+
+### Testing the installation (tm_testkit)
+TM_kit comes with a directory for testing all the functions
+of the main TM.py script. If the installatino of all Python libraries
+was a success, the test task will execute and exit successfully.
+
+| TM_kit
+	| tm_testkit		
+		| tm_test.sh	A script for testing installation
+		| test.gro	A small sample protein
+		| test.xtc	A small sample trajectories
+		
+The installation can be tested by running tm_test.sh 
+The script has to be ran inside of the tm_testkit directory.
+
+	cd tm_testkit
+	./tm_test.sh
+ 
+The script should run for under a few minutes.
+Created files will be deleted automatically.
+If the code executes and exits successfully, everything should work.
 
 ##############################################################################
 
