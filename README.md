@@ -43,6 +43,7 @@ Put the directory TM_kit in the desired location. It should contain:
 	- tm_preproc.sh	Preprocessing Bash script
 	- tm_makemap.sh	Map-making Bash script
 	- tm_graph.sh		Graph-making Bash script
+ 	- tm_subtract.sh	A script for creating a difference map by subtracting two csv's
 	- tm_quickguide.txt	(optional)
 	- tm_testkit		(optional)
 		- tm_test.sh	(optional) A script for testing installation
@@ -120,6 +121,17 @@ roll_avg variable is for the rolling average.
 
 The full list of available colors can be found in matplotlib documentation.
 
+##############################################################################
+
+4) Making a difference map
+   	Firstly, create two csv's using tm_preprocess.sh for both simulations
+   you wish to analyze.
+   Then, using tm_subtract.sh create a difference matrix (e.g., diff.csv)
+
+Lastly, the diff.csv needs to be visualized with tm_makemap.sh. The process is
+identical to regular csv's, just the minimal and maximal values need to be
+adjusted to account for negative valeus (e.g., a range of -7 to 7 Angstroms);
+and a colormap has to be set to a divergent one (value 1 in the script).
 
 ##############################################################################
 
