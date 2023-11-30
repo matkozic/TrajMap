@@ -32,7 +32,7 @@ for Python, using pip:
 	pip install numpy
 	pip install matplotlib
 	
-### Analysis using trajmap ###
+### Using trajmap ###
 
 To perform analysis, first step would be to downlaod TM_kit.
 Into the folder, you would put your trajectories for simulations
@@ -57,7 +57,24 @@ For details about parameters and variables of .sh scripts see documentation.
 
 With all scripts adjusted, as they are in our case, we simply execute them in order:
 
-
+ #Creating a trajectory map for variant 1.
+ 
+	./tm_preproc_var_1.sh
+	./tm_makemap_var_1.2h
+ 
+ #Creating a trajectory map for variant 2.
+ 
+	./tm_preproc_var_2.sh
+	./tm_makemap_var_2.2h
+ 
+ #Creating a difference map by subtrasting variant 2 from variant 1
+ 
+	./tm_subtract.sh
+	./tm_makemap_diff.sh
+	
+ #Creating a shift graph for region 240 to 250 of variant 1
+ 
+	./tm_graph_var_1.sh
 
 ### Analysis ###
 
@@ -78,5 +95,5 @@ simulations. The highlighting of exact differences facilitates drawing conclusio
 effects of whatever we are hoping to explore using variant simulations.
 
 And lastly, shift graphs of a region represents the behaviour of that region during
-simulation time, relative to its locatino in the first frame fpr the aligned trajectory.
+simulation time, relative to its locatino in the first frame for the aligned trajectory.
 So its a way to directly visualize a conformation change of e.g., a helix our case.
