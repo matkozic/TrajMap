@@ -1,0 +1,82 @@
+
+###---------------------###
+###  TrajMap  tutorial  ###
+###---------------------###
+#
+# 2023.11.29 - 10:30 - v0.0
+
+The goal of this tutorial is to demonstrate the workflow of TrajMap scripts
+As well as to showcase how to interpret the obtained results, 
+and draw conclusions from them.
+
+This tutorial is aimed at absolute beginners who wish to use TM on Linux machiens.
+
+To start the tutorial, simply download the EXAMPLE directory from
+the main GitHub repo of TrajMap, and follow along with this.
+
+Good luck,
+  ~Matej Kožić, the main developer
+   mkozic@chem.pmf.hr
+
+########################################################
+#//////////////////////////////////////////////////////#
+########################################################
+
+### Installation of dependencies ###
+
+Before starting, we will attempt to install all dependencies 
+for Python, using pip:
+
+	pip install mdtraj
+	pip install pandas
+	pip install numpy
+	pip install matplotlib
+	
+### Analysis using trajmap ###
+
+To perform analysis, first step would be to downlaod TM_kit.
+Into the folder, you would put your trajectories for simulations
+you wish to analyze.
+Here, that step is already performed, and we simply renamed the
+TM_kit folder into "EXAMPLE", and this tutorial.txt is located
+inside of it.
+
+In this tutorial, we will analyze two variant simulations of one protein.
+We will create trajectory maps for each of the two variants:
+variant_1 and variant_2; and from there we will create a difference map to
+highlight all differences between them.
+
+In this case, trajectories were created in a .pdb trajectory format.
+For details about formats, kindly refer to documentation.
+
+After putting everything in the working directory TM_kit, the next step
+is to adjust parameters in bash scripts that will run the analysis.
+Here, we have already performed that step. Notice how we copied scripts for each
+of the two variant simulations.
+For details about parameters and variables of .sh scripts see documentation.
+
+With all scripts adjusted, as they are in our case, we simply execute them in order:
+
+
+
+### Analysis ###
+
+Tajectory maps can be thought of as 2D representation of simulatio courses.
+Each bright pixel is a large movement of that aminoacid in that frame, from its
+starting point in the beginning of the simulation (relative to the protein).
+From that, we can conclude that horizontal bands represent parts of protein
+that have moved substantially from their initial position, and stayed there.
+
+Trajectory maps can be used as a simulation roadmap, so we can more easily observe
+those conformational changes while lookin at the simulation using visualization programs.
+From trajectory maps we see notable bands at regions we are interested in, e.g. region around
+aminoacid 245, and from then its easy to find that part of the protein and the starting
+time of that conformational change in a visualization software.
+
+With difference maps we see the difference in movements of the protein in the two variant
+simulations. The highlighting of exact differences facilitates drawing conclusions about the
+effects of whatever we are hoping to explore using variant simulations.
+
+And lastly, shift graphs of a region represents the behaviour of that region during
+simulation time, relative to its locatino in the first frame fpr the aligned trajectory.
+So its a way to directly visualize a conformation change of e.g., a helix our case.
