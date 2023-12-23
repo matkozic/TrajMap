@@ -6,13 +6,13 @@
 #INPUTS:
 
 saved_csv="csv.csv"  #load the matrix as a previously saved .csv
-shift_params="1,40,0,499" # [residue1, residue2, time1, time2]
+shift_params="1,40,0,99" # [residue1, residue2, time1, time2]
 savefig="savefig" #savename for the graph
 title="title"
 label="label" #label of the graph legend
 y_params="0,5,1,0.1" #y axis ticks
 #	[min_value, max_value, major_tick, minor_tick]
-x_params="0,500,50,10" #x axis ticks
+x_params="0,100,50,10" #x axis ticks
 #	[min_value, max_value, major_tick, minor_tick]
 roll_avg="10" #rolling average value; 10/15/20 recomended
 color="black" #color of the graph     
