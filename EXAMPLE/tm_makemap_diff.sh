@@ -8,7 +8,7 @@
 saved_csv="diff_1-2.csv"       #load the matrix as a previously saved .csv
 savefig="DiffMap_1-2.png"		#savename of the heatmap
 title="Difference map: Variant 1 - Variant 2"			#title of the map
-params="25,5,20,5,-5,5,308,0,1" #parameters for heatmap. Adjust to fit .
+params="25,5,20,5,-5,5,308,1,0" #parameters for heatmap. Adjust to fit .
 #	params:
 #	 [x_major, x_minor, y_major, y_minor, vmin, vmax, residues, cmap, aspect]
 #	default for 500 frame 500 aa simulation:
