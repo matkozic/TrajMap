@@ -6,13 +6,13 @@
 #INPUTS:
 
 saved_csv="var_1.csv"  #load the matrix as a previously saved .csv
-shift_params="240,240,0,499" # [residue1, residue2, time1, time2]
+shift_params="24,34,0,99" # [residue1, residue2, time1, time2]
 savefig="ShiftGraph_var_1" #savename for the graph
-title="Variant 1, residues 240-250"
-label="Residues 240-250" #label of the graph legend
+title="Variant 1, residues 24-34"
+label="Residues 24-34" #label of the graph legend
 y_params="0,5,1,0.1" #y axis ticks
 #	[min_value, max_value, major_tick, minor_tick]
-x_params="0,500,50,10" #x axis ticks
+x_params="0,100,20,10" #x axis ticks
 #	[min_value, max_value, major_tick, minor_tick]
 roll_avg="10" #rolling average value; 10/15/20 recomended
 color="black" #color of the graph     
