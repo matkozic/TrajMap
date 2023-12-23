@@ -2,8 +2,8 @@
 
 python3 ../TM.py << INPUTS
 0
-test.gro
-test.xtc
+test.pdb
+test.pdb
 1
 testpdb.pdb
 1
